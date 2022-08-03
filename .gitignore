@@ -1,0 +1,15 @@
+### Backend Ignores ###
+wheretogo-backend/HELP.md
+wheretogo-backend/target
+!.mvn/wrapper/maven-wrapper.jar
+wheretogo-backend/.idea
+
+### Frontend Ignores ###
+node_modules
+
+### Telegram Ignores ###
+__pycache__
+venv
+
+#Misc
+.env
