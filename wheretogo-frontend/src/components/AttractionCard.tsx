@@ -8,7 +8,7 @@ export default function AttractionCard(props: attractionPayload) {
 
     const mockAttractionContent = (attraction: attraction) => {
         return (
-            <Card>
+            <Card variant='outlined'>
                 <CardContent>
                     <Typography variant='h4' component="div">
                         {attraction.name}

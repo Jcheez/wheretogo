@@ -12,10 +12,15 @@ export interface location {
 
 export interface attraction {
     name: string
+    id: string
     cost: number
     type: string
     photoId ?: string
     locations ?: location[]
     description ?: string
     readMore ?: string
+}
+
+export interface GetMockAttractionResponse {
+    data: attraction[]
 }
