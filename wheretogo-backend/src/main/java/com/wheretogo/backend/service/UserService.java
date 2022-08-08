@@ -52,13 +52,13 @@ public class UserService {
         if (listAtt.size() <= numRecommendations) {
             attIds = listAtt;
             user.getOptions().put(type, new ArrayList<>());
-            this.userRepository.save(user);
         } else {
             for (int i=0; i<numRecommendations; i++) {
                 String attId = listAtt.remove(listAtt.size() - 1);
                 attIds.add(attId);
             }
         }
+        this.userRepository.save(user);
         return attIds;
     }
 

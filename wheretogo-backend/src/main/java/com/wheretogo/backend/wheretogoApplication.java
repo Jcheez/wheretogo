@@ -39,7 +39,9 @@ public class wheretogoApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/api/mock/attractions").allowedOrigins("http://localhost:3000");
+				registry.addMapping("/api/**")
+						.allowedOrigins("http://localhost:3000")
+						.allowedMethods("GET", "DELETE", "PUT", "POST");
 			}
 		};
 	}
