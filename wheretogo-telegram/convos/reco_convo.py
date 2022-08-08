@@ -51,8 +51,8 @@ async def recommendation_end(update:Update, context:ContextTypes.DEFAULT_TYPE) -
     if "locations" not in response:
         await query.edit_message_text(f"You have finished all the recommendations. Use /sync to import more recommendations from us!")
         return -1
+    await query.delete_message()
     for id in response["locations"]:
         attraction = get_attraction(id)
-        await query.delete_message()
         await query.message.reply_photo(photo=bson_to_image(attraction['photoId']), caption=recommendation_response(attraction), parse_mode=ParseMode.MARKDOWN)
     return -1
